@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kalkulátor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/png" href="kalkulator2.png">
+  <script src="szamitas.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1><b>Kerület, Terület, Felszín, Térfogat kiszámítás</b></h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card text-center bg-light">
+              <div class="card-body">
+                <h5 class="card-title">Kör</h5>
+                <img src="kör.png" class="card-img-bottom" alt="Kör" title="Kör">
+                <br><br>
+                <div id="accordion">
+                  <div class="card" style="width: auto; border-radius: 5px;">
+                    <div class="card-header hatter">
+                      <a class="card-link szoveg" data-toggle="collapse" href="#collapseOne">
+                        Kerület
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="A kör kerülete a sugár kétszeresének és a π-nek a szorzata."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
+                        <label for="szoveg">Sugár hossza (r):</label></br>
+                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="sugar" min="0">
+                            <select style="width: 50px;" name="megység4" id="megység4">
+                                <option value="mm">mm</option>
+                                <option value="cm" selected>cm</option>
+                                <option value="dm">dm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                            </select>
+                        <br>
+                        <label for="korkeredmeny">Eredmény:</label>
+                        <br>
+                        <input type="text" style="width: 205px;" id="korkeredmeny" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card" style="width: auto; border-radius: 5px;">
+                    <div class="card-header hatter">
+                      <a class="collapsed card-link szoveg" data-toggle="collapse" href="#collapseTwo">
+                      Terület
+                    </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="A kör területe a sugár négyzetének és a π-nek a szorzata."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
+                        <label for="szoveg">Sugár hossza (r):</label></br>
+                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="sugar1" min="0">
+                            <select style="width: 50px;" name="megység5" id="megység5">
+                                <option value="mm">mm</option>
+                                <option value="cm" selected>cm</option>
+                                <option value="dm">dm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                            </select>
+                        <br>
+                        <label for="korteredmeny">Eredmény:</label>
+                        <br>
+                        <input type="text" style="width: 205px;" id="korteredmeny" disabled>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card text-center bg-light">
+              <div class="card-body">
+                <h5 class="card-title">Gömb</h5>
+                <img src="gömb.png" class="card-img-bottom" alt="Gúla" title="Gúla">
+                <br><br>
+                <div id="accordion">
+                  <div class="card" style="width: auto; border-radius: 5px;">
+                    <div class="card-header hatter">
+                      <a class="card-link szoveg" data-toggle="collapse" href="#collapseFive">
+                        Felszín
+                      </a>
+                    </div>
+                    <div id="collapseFive" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="A gömb felszíne a következőképpen számolható ki: V = πr2"><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
+                        <label for="szoveg">Sugár hossza (r):</label></br>
+                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="sugar2" min="0">
+                            <select style="width: 50px;" name="megység6" id="megység6">
+                                <option value="mm">mm</option>
+                                <option value="cm" selected>cm</option>
+                                <option value="dm">dm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                            </select>
+                        <br>
+                        <label for="gombferedmeny">Eredmény:</label>
+                        <br>
+                        <input type="text" style="width: 205px;" id="gombferedmeny" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card" style="width: auto; border-radius: 5px;">
+                    <div class="card-header hatter">
+                      <a class="collapsed card-link szoveg" data-toggle="collapse" href="#collapseSix">
+                      Térfogat
+                    </a>
+                    </div>
+                    <div id="collapseSix" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="A gömb térfogata a következőképpen számolható ki: V = 4/3πr3"><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
+                        <label for="szoveg">Sugár hossza (r):</label></br>
+                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="sugar3" min="0">
+                            <select style="width: 50px;" name="megység7" id="megység7">
+                                <option value="mm">mm</option>
+                                <option value="cm" selected>cm</option>
+                                <option value="dm">dm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                            </select>
+                        <br>
+                        <label for="gombteredmeny">Eredmény:</label>
+                        <br>
+                        <input type="text" style="width: 205px;" id="gombteredmeny" disabled>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card text-center bg-light">
+              <div class="card-body">
+                <h5 class="card-title">Négyzet</h5>
+                <img src="négyzet.png" class="card-img-bottom" alt="Négyzet" title="Négyzet">
+                <br><br>
+                <div id="accordion">
+                  <div class="card" style="width: auto; border-radius: 5px;">
+                    <div class="card-header hatter">
+                      <a class="card-link szoveg" data-toggle="collapse" href="#collapseThree">
+                        Kerület
+                      </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                      <div class="card-body"> 
+                        <!-- # JS kezdete -->
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="A négyzet kerületét úgy tudjuk kiszámolni, hogy az 'a' oldal hosszát megszorozzuk 4-gyel."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
+                        <label for="szoveg">Oldalak hossza (a):</label></br>
+                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="oldal" min="0">
+                            <select style="width: 50px;" name="megység" id="megység">
+                                <option value="mm">mm</option>
+                                <option value="cm" selected>cm</option>
+                                <option value="dm">dm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                            </select>
+                        <br>
+                        <label for="nkeredmeny">Eredmény:</label>
+                        <br>
+                        <input type="text" style="width: 205px;" id="nkeredmeny" disabled>   
+                        <!-- # JS vége   -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card" style="width: auto; border-radius: 5px;">
+                    <div class="card-header hatter">
+                      <a class="collapsed card-link szoveg" data-toggle="collapse" href="#collapseFour">
+                      Terület
+                    </a>
+                    </div>
+                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <!-- JS kezdete -->
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="A négyzet területét úgy számolhatjuk ki, hogy az a oldalt megszorozzuk önmagával (négyzetre emeljük)."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
+                        <label for="szoveg">Oldalak hossza (a):</label></br>
+                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="oldalt" min="0">
+                            <select style="width: 50px;" name="megység1" id="megység1">
+                                <option value="mm">mm</option>
+                                <option value="cm" selected>cm</option>
+                                <option value="dm">dm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                            </select>
+                        <br>
+                        <label for="nteredmeny">Eredmény:</label>
+                        <br>
+                        <input type="text" style="width: 205px;" id="nteredmeny" disabled>
+                        <!-- JS vége -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card text-center bg-light">
+              <div class="card-body">
+                <h5 class="card-title">Kocka</h5>
+                <img src="kocka.png" style="padding-top: 25px" class="card-img-bottom" alt="Kocka" title="Kocka">
+                <br><br>
+                <div id="accordion">
+                  <div class="card" style="width: auto; border-radius: 5px;">
+                    <div class="card-header hatter">
+                      <a class="card-link szoveg" data-toggle="collapse" href="#collapseSeven">
+                        Felszín
+                      </a>
+                    </div>
+                    <div id="collapseSeven" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="A kocka felszíne a hat határoló négyzet területének összegeként számítható ki."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
+                        <label for="szoveg">Oldalak hossza (a):</label></br>
+                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="oldalkf" min="0">
+                            <select style="width: 50px;" name="megység2" id="megység2">
+                                <option value="mm">mm</option>
+                                <option value="cm" selected>cm</option>
+                                <option value="dm">dm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                            </select>
+                        <br>
+                        <label for="kferedmeny">Eredmény:</label>
+                        <br>
+                        <input type="text" style="width: 205px;" id="kferedmeny" disabled>   
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card" style="width: auto; border-radius: 5px;">
+                    <div class="card-header hatter">
+                      <a class="collapsed card-link szoveg" data-toggle="collapse" href="#collapseEight">
+                      Térfogat
+                    </a>
+                    </div>
+                    <div id="collapseEight" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="A kocka térfogata legegyszerűbben az oldalak szorzataként kapható meg."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
+                        <label for="szoveg">Oldalak hossza (a):</label></br>
+                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="oldalkt" min="0">
+                            <select style="width: 50px;" name="megység3" id="megység3">
+                                <option value="mm">mm</option>
+                                <option value="cm" selected>cm</option>
+                                <option value="dm">dm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                            </select>
+                        <br>
+                        <label for="kteredmeny">Eredmény:</label>
+                        <br>
+                        <input type="text" style="width: 205px;" id="kteredmeny" disabled>   
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+</body>
+</html>

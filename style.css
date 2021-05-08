@@ -1,0 +1,51 @@
+body {
+    background-image: url('https://st3.depositphotos.com/5303366/15805/v/600/depositphotos_158059060-stock-video-abstract-simple-black-and-white.jpg');
+} 
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+    text-shadow: 5px 0 7px rgb(182, 77, 86);
+    color: rgb(29, 27, 27);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 5px;
+}
+
+.row {
+    margin-top: 35px;
+}
+
+.card {
+    margin: 5px;
+    border-radius: 20px;
+    width: 350px;
+}
+
+.card-title {
+    border-bottom: 2px solid;
+    border-color: black;
+    padding-bottom: 8px;
+}
+
+.card-img-bottom {
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+.card-link {
+    color:rgb(0, 0, 0)
+}
+
+.hatter {
+    background-color: rgb(236, 207, 212);
+}
+
+.hatter:hover {
+    background-color: rgb(238, 149, 164);
+}
+
+.szoveg:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
