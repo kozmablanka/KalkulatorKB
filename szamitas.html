@@ -33,7 +33,7 @@
                       <div class="card-body">
                         <a href="#" data-toggle="tooltip" data-placement="top" title="A kör kerülete a sugár kétszeresének és a π-nek a szorzata."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
                         <label for="szoveg">Sugár hossza (r):</label></br>
-                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="sugar" min="0">
+                        <input oninput="kiszamolas()" style="width: 150px;" type="number" id="sugar" min="0">
                             <select style="width: 50px;" name="megység4" id="megység4">
                                 <option value="mm">mm</option>
                                 <option value="cm" selected>cm</option>
@@ -58,7 +58,7 @@
                       <div class="card-body">
                         <a href="#" data-toggle="tooltip" data-placement="top" title="A kör területe a sugár négyzetének és a π-nek a szorzata."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
                         <label for="szoveg">Sugár hossza (r):</label></br>
-                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="sugar1" min="0">
+                        <input oninput="kiszamolas()" style="width: 150px;" type="number" id="sugar1" min="0">
                             <select style="width: 50px;" name="megység5" id="megység5">
                                 <option value="mm">mm</option>
                                 <option value="cm" selected>cm</option>
@@ -95,7 +95,7 @@
                       <div class="card-body">
                         <a href="#" data-toggle="tooltip" data-placement="top" title="A gömb felszíne a következőképpen számolható ki: V = πr2"><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
                         <label for="szoveg">Sugár hossza (r):</label></br>
-                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="sugar2" min="0">
+                        <input oninput="kiszamolas()" style="width: 150px;" type="number" id="sugar2" min="0">
                             <select style="width: 50px;" name="megység6" id="megység6">
                                 <option value="mm">mm</option>
                                 <option value="cm" selected>cm</option>
@@ -120,7 +120,7 @@
                       <div class="card-body">
                         <a href="#" data-toggle="tooltip" data-placement="top" title="A gömb térfogata a következőképpen számolható ki: V = 4/3πr3"><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
                         <label for="szoveg">Sugár hossza (r):</label></br>
-                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="sugar3" min="0">
+                        <input oninput="kiszamolas()" style="width: 150px;" type="number" id="sugar3" min="0">
                             <select style="width: 50px;" name="megység7" id="megység7">
                                 <option value="mm">mm</option>
                                 <option value="cm" selected>cm</option>
@@ -158,7 +158,7 @@
                         <!-- # JS kezdete -->
                         <a href="#" data-toggle="tooltip" data-placement="top" title="A négyzet kerületét úgy tudjuk kiszámolni, hogy az 'a' oldal hosszát megszorozzuk 4-gyel."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
                         <label for="szoveg">Oldalak hossza (a):</label></br>
-                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="oldal" min="0">
+                        <input oninput="kiszamolas()" style="width: 150px;" type="number" id="oldal" min="0">
                             <select style="width: 50px;" name="megység" id="megység">
                                 <option value="mm">mm</option>
                                 <option value="cm" selected>cm</option>
@@ -185,7 +185,7 @@
                         <!-- JS kezdete -->
                         <a href="#" data-toggle="tooltip" data-placement="top" title="A négyzet területét úgy számolhatjuk ki, hogy az a oldalt megszorozzuk önmagával (négyzetre emeljük)."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
                         <label for="szoveg">Oldalak hossza (a):</label></br>
-                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="oldalt" min="0">
+                        <input oninput="kiszamolas()" style="width: 150px;" type="number" id="oldalt" min="0">
                             <select style="width: 50px;" name="megység1" id="megység1">
                                 <option value="mm">mm</option>
                                 <option value="cm" selected>cm</option>
@@ -223,7 +223,7 @@
                       <div class="card-body">
                         <a href="#" data-toggle="tooltip" data-placement="top" title="A kocka felszíne a hat határoló négyzet területének összegeként számítható ki."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
                         <label for="szoveg">Oldalak hossza (a):</label></br>
-                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="oldalkf" min="0">
+                        <input oninput="kiszamolas()" style="width: 150px;" type="number" id="oldalkf" min="0">
                             <select style="width: 50px;" name="megység2" id="megység2">
                                 <option value="mm">mm</option>
                                 <option value="cm" selected>cm</option>
@@ -248,7 +248,7 @@
                       <div class="card-body">
                         <a href="#" data-toggle="tooltip" data-placement="top" title="A kocka térfogata legegyszerűbben az oldalak szorzataként kapható meg."><img src="info-logo-circle_318-947.jpg" style="width: 20px; height: 20px; margin-left: 210px; margin-top: 0px;"></a>
                         <label for="szoveg">Oldalak hossza (a):</label></br>
-                        <input onmousemove="kiszamolas()" style="width: 150px;" type="number" id="oldalkt" min="0">
+                        <input oninput="kiszamolas()" style="width: 150px;" type="number" id="oldalkt" min="0">
                             <select style="width: 50px;" name="megység3" id="megység3">
                                 <option value="mm">mm</option>
                                 <option value="cm" selected>cm</option>
